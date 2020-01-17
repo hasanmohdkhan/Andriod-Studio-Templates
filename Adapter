@@ -1,0 +1,51 @@
+
+import android.content.Context;
+
+public class ${NAME} extends RecyclerView.Adapter<${NAME}.${ViewHolder_Name}>{
+
+   private List<${Model_Class}> list;
+   private Context context;
+    
+     
+   
+   public ${NAME}(List<${Model_Class}> list , Context context) {
+            this.list = list;
+            this.context = context;
+       
+     }
+
+    @NonNull
+    @Override
+    public ${ViewHolder_Name} onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater from = LayoutInflater.from(parent.getContext());
+        Binding binding = DataBindingUtil.inflate(from, R.layout.${Item_Layout_ID},parent,false);
+        return new ${ViewHolder_Name}(binding);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull ${ViewHolder_Name} holder, int position) {
+           ${Model_Class}  model = list.get(position);
+          holder.bind(model);  
+    }
+
+    @Override
+    public int getItemCount() {
+        return  list.size();
+    }
+
+   
+
+    class  ${ViewHolder_Name} extends RecyclerView.ViewHolder{
+         Binding bi;
+
+         ${ViewHolder_Name}(@NonNull Binding bi) {
+            super(bi.getRoot());
+             this.bi = bi;
+        }
+
+         public void bind(${Model_Class}  model) {
+        
+         }
+     }
+
+}
