@@ -2,4 +2,5 @@
 Template for andriod studio
  
 **Template List**
- - [Recycler Adapter](./Adapter)
+ - [Recycler Adapter java](./Adapter)
+ - [Recycler Adapter java](./Adapter)
